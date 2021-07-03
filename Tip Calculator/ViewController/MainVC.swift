@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
+class MainVC: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
     
 
     @IBOutlet weak var lblCheckAmount: UILabel!

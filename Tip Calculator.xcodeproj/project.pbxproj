@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		CF00A65B240328CB00AA780D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF00A65A240328CB00AA780D /* AppDelegate.swift */; };
 		CF00A65D240328CB00AA780D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF00A65C240328CB00AA780D /* SceneDelegate.swift */; };
-		CF00A65F240328CB00AA780D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF00A65E240328CB00AA780D /* ViewController.swift */; };
+		CF00A65F240328CB00AA780D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF00A65E240328CB00AA780D /* MainVC.swift */; };
 		CF00A662240328CB00AA780D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF00A660240328CB00AA780D /* Main.storyboard */; };
 		CF00A664240328CD00AA780D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF00A663240328CD00AA780D /* Assets.xcassets */; };
 		CF00A667240328CD00AA780D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF00A665240328CD00AA780D /* LaunchScreen.storyboard */; };
+		CF02CCEF2690B008000EA634 /* CalculatorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCEE2690B008000EA634 /* CalculatorLabel.swift */; };
+		CF02CCF12690BDE1000EA634 /* BackgroundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCF02690BDE1000EA634 /* BackgroundLabel.swift */; };
+		CF02CCF32690BF17000EA634 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCF22690BF17000EA634 /* BaseView.swift */; };
+		CF02CCF52690C018000EA634 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCF42690C018000EA634 /* ColorSwatch.swift */; };
 		CF79A8D2268BD520009A5AD6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79A8D1268BD520009A5AD6 /* SettingsVC.swift */; };
+		CFA6A8402690C67B000D68C4 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA6A83F2690C67B000D68C4 /* CalculatorButton.swift */; };
 		CFBCE6B6268A883C00058B96 /* RoundedTipHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCE6B5268A883C00058B96 /* RoundedTipHelper.swift */; };
 		CFD3B2D0242C226C001F1BFF /* waterdrop.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFD3B2CF242C226B001F1BFF /* waterdrop.wav */; };
 /* End PBXBuildFile section */
@@ -22,12 +27,17 @@
 		CF00A657240328CB00AA780D /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF00A65A240328CB00AA780D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF00A65C240328CB00AA780D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF00A65E240328CB00AA780D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF00A65E240328CB00AA780D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CF00A661240328CB00AA780D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF00A663240328CD00AA780D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF00A666240328CD00AA780D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF00A668240328CD00AA780D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF02CCEE2690B008000EA634 /* CalculatorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLabel.swift; sourceTree = "<group>"; };
+		CF02CCF02690BDE1000EA634 /* BackgroundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLabel.swift; sourceTree = "<group>"; };
+		CF02CCF22690BF17000EA634 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CF02CCF42690C018000EA634 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
 		CF79A8D1268BD520009A5AD6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		CFA6A83F2690C67B000D68C4 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		CFBCE6B5268A883C00058B96 /* RoundedTipHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTipHelper.swift; sourceTree = "<group>"; };
 		CFD3B2CF242C226B001F1BFF /* waterdrop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = waterdrop.wav; path = Assets.xcassets/waterdrop.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,11 +72,11 @@
 		CF00A659240328CB00AA780D /* Tip Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				CF02CCED2690AFA6000EA634 /* View */,
 				CF79A8D0268BD4E3009A5AD6 /* ViewController */,
 				CFBCE6B4268A87CE00058B96 /* Model */,
 				CF00A65A240328CB00AA780D /* AppDelegate.swift */,
 				CF00A65C240328CB00AA780D /* SceneDelegate.swift */,
-				CF00A65E240328CB00AA780D /* ViewController.swift */,
 				CF00A660240328CB00AA780D /* Main.storyboard */,
 				CF00A663240328CD00AA780D /* Assets.xcassets */,
 				CFD3B2CF242C226B001F1BFF /* waterdrop.wav */,
@@ -76,9 +86,22 @@
 			path = "Tip Calculator";
 			sourceTree = "<group>";
 		};
+		CF02CCED2690AFA6000EA634 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF02CCEE2690B008000EA634 /* CalculatorLabel.swift */,
+				CF02CCF02690BDE1000EA634 /* BackgroundLabel.swift */,
+				CF02CCF22690BF17000EA634 /* BaseView.swift */,
+				CF02CCF42690C018000EA634 /* ColorSwatch.swift */,
+				CFA6A83F2690C67B000D68C4 /* CalculatorButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF79A8D0268BD4E3009A5AD6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CF00A65E240328CB00AA780D /* MainVC.swift */,
 				CF79A8D1268BD520009A5AD6 /* SettingsVC.swift */,
 			);
 			path = ViewController;
@@ -164,11 +187,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF00A65F240328CB00AA780D /* ViewController.swift in Sources */,
+				CF00A65F240328CB00AA780D /* MainVC.swift in Sources */,
 				CF00A65B240328CB00AA780D /* AppDelegate.swift in Sources */,
 				CF00A65D240328CB00AA780D /* SceneDelegate.swift in Sources */,
 				CFBCE6B6268A883C00058B96 /* RoundedTipHelper.swift in Sources */,
+				CF02CCF12690BDE1000EA634 /* BackgroundLabel.swift in Sources */,
+				CF02CCEF2690B008000EA634 /* CalculatorLabel.swift in Sources */,
 				CF79A8D2268BD520009A5AD6 /* SettingsVC.swift in Sources */,
+				CF02CCF32690BF17000EA634 /* BaseView.swift in Sources */,
+				CF02CCF52690C018000EA634 /* ColorSwatch.swift in Sources */,
+				CFA6A8402690C67B000D68C4 /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
