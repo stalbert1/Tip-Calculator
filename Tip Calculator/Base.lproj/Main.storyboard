@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,15 +87,25 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-9M-eqC">
                                         <rect key="frame" x="20" y="190" width="333" height="93"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split check 1 way" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WT-Mw-71a">
-                                                <rect key="frame" x="0.0" y="33.5" width="162.5" height="26.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WT-Mw-71a">
+                                                <rect key="frame" x="0.0" y="33.5" width="105" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-iz-Fu8">
-                                                <rect key="frame" x="239" y="30.5" width="94" height="32"/>
+                                                <rect key="frame" x="139.5" y="30.5" width="94" height="32"/>
                                             </stepper>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-eo-4M7">
+                                                <rect key="frame" x="307" y="31.5" width="26" height="30.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="settingsPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCA-AS-jIS"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GsF-6m-VZt">
@@ -258,14 +269,69 @@
                         <outlet property="lblTipAmount" destination="hb1-a4-brC" id="lu3-Y8-okI"/>
                         <outlet property="lblTipPercent" destination="Ecy-A7-onn" id="ogD-V3-Nju"/>
                         <outlet property="lblTotal" destination="GMw-qc-S78" id="6Ql-Z9-lsm"/>
+                        <segue destination="f7I-io-wRd" kind="show" identifier="settings" id="0yQ-y7-fDf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
         </scene>
+        <!--SettingsVC-->
+        <scene sceneID="VzJ-X6-cwR">
+            <objects>
+                <viewController id="f7I-io-wRd" customClass="SettingsVC" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4cd-L5-pfy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounded Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-mn-nEK">
+                                <rect key="frame" x="107" y="10" width="161" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91Z-uJ-mlx">
+                                <rect key="frame" x="164.5" y="602" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Ob-ls-VCp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="VFo-QV-4BQ"/>
+                                </constraints>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <action selector="returnSelected" destination="f7I-io-wRd" eventType="touchUpInside" id="t8o-sS-vcv"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaH-Ak-wPw">
+                                <rect key="frame" x="0.0" y="90.5" width="375" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L6k-rT-nYr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SaH-Ak-wPw" firstAttribute="trailing" secondItem="L6k-rT-nYr" secondAttribute="trailing" id="4d0-zM-iJb"/>
+                            <constraint firstItem="bEQ-mn-nEK" firstAttribute="top" secondItem="L6k-rT-nYr" secondAttribute="top" constant="10" id="HId-zc-261"/>
+                            <constraint firstItem="bEQ-mn-nEK" firstAttribute="centerX" secondItem="4cd-L5-pfy" secondAttribute="centerX" id="JRG-SP-rrv"/>
+                            <constraint firstItem="SaH-Ak-wPw" firstAttribute="top" secondItem="bEQ-mn-nEK" secondAttribute="bottom" constant="60" id="LJU-2N-og5"/>
+                            <constraint firstItem="91Z-uJ-mlx" firstAttribute="centerX" secondItem="4cd-L5-pfy" secondAttribute="centerX" id="Sva-VF-aO6"/>
+                            <constraint firstItem="L6k-rT-nYr" firstAttribute="bottom" secondItem="91Z-uJ-mlx" secondAttribute="bottom" constant="15" id="pu1-JJ-nAn"/>
+                            <constraint firstItem="SaH-Ak-wPw" firstAttribute="leading" secondItem="L6k-rT-nYr" secondAttribute="leading" id="zqt-D7-zca"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Id-0L-Jj3"/>
+                    <connections>
+                        <outlet property="pickerTipRound" destination="SaH-Ak-wPw" id="Yly-L2-4h2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzz-dh-m4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="125.4872563718141"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

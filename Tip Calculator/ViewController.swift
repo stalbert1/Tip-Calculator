@@ -9,7 +9,8 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
+    
 
     @IBOutlet weak var lblCheckAmount: UILabel!
     @IBOutlet weak var lblTipAmount: UILabel!
@@ -21,16 +22,35 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var total: Double = 0.0
     var checkAmount: Double = 0.0
     var decHasBeenPressed: Bool = false
+    
+    //Will change based on Options in load and when returning from settings
+    var roundBy: RoundedValue = .twentyFive
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         lblCheckAmount.text = ""
         lblTotal.text = ""
         lblTipAmount.text = ""
         
+        loadUserSettings()
+        
+        
     }
+    
+    func loadUserSettings() {
+        //Will load user settings only when the view did load
+        let lastSelectedRoundingValue = UserDefaults.standard.object(forKey: "roundingUnits")
+        
+        if let verifiedLastRoundingValue = lastSelectedRoundingValue as? Int {
+            roundBy = RoundedValue(rawValue: Int(verifiedLastRoundingValue))!
+        }
+        
+        
+    }
+    
     
     func playSound() {
         //let soundURL = Bundle.main.url(forResource: "waterdrop", withExtension: "wav")
@@ -47,50 +67,43 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
-
-    func roundUpNumber(originalNumber: Double) -> Double {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        var returnedNumber: Double = 0.0
-        
-        let roundedDownNumber = Int(originalNumber)
-        let change = Int((originalNumber - Double(roundedDownNumber)) * 100)
-        
-        var roundedUpChange: Int = 0
-        
-        if change == 0 {
-               roundedUpChange = 0
-           }
-           if change > 0 && change < 26 {
-               roundedUpChange = 25
-           }
-           if change > 25 && change < 51 {
-               roundedUpChange = 50
-           }
-           if change > 50 && change < 76 {
-               roundedUpChange = 75
-           }
-           if change > 75 {
-               roundedUpChange = 100
-           }
-        
-        if roundedUpChange == 100 {
-            //add 1$ to the rounded down tip amount and return with .00
-            //4.99 , 4 + 1 = 5.00
-            returnedNumber = Double(roundedDownNumber + 1)
-        } else {
-            //take the int and divide be 100 25 would be .25 and add to the rounded down tipAmt
-            returnedNumber = Double(roundedDownNumber)  + ((Double(roundedUpChange)) / 100)
+        //will send over the current setting so the wheel can start in appropriate position
+        if segue.identifier == "settings" {
+            if let destination = segue.destination as? SettingsVC {
+                destination.startingRoundVal = roundBy
+                
+                //assign the delegagte
+                destination.delegate = self
+                
+            }
         }
-        
-        return returnedNumber
     }
-
+    
+    @IBAction func settingsPressed() {
+        //Will need to seague from this screen to the settings.
+        print("Transfer to other screen")
+        
+        performSegue(withIdentifier: "settings", sender: self)
+        
+        //When the Settings VC is dismissed need to see if the settings have changed.
+        print("When does this fire??? Settings pressed......")
+        //Does not return here...
+        
+    }
+    
+    func updateSettings(value: RoundedValue) {
+        //This is what will be called when the settings panel is dismissed.
+        //Assign the value returned to the amount to round by
+        
+        print("Returned to main view controller value that I got back is \(value)")
+        roundBy = value
+    }
+    
     @IBAction func numberPressed(_ sender: UIButton) {
         
         //Will only allow 1 . to be pressed
-        
-        //need to add a sound when a key is pressed
-        //let sound = AVPlayer
         
         let x = sender.titleLabel?.text
         
@@ -149,7 +162,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         //now that we have the tip amount need to round up the amount and use this rounded up number for displaying new total and tip along with what the tip % would be...
         
-        let roundedUpTip = roundUpNumber(originalNumber: tipAmount)
+        //let roundedUpTip = roundUpNumber(originalNumber: tipAmount)
+        let roundedUpTip = RoundedTipHelper.roundUpValue(valueToRound: tipAmount, roundBy: roundBy)
         
         //set the display based on the rounded up tip
         
