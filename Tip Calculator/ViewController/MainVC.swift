@@ -30,13 +30,9 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        lblCheckAmount.text = ""
-        lblTotal.text = ""
-        lblTipAmount.text = ""
+        clearCalculation()
         
         loadUserSettings()
-        
         
     }
     
@@ -83,21 +79,15 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
     
     @IBAction func settingsPressed() {
         //Will need to seague from this screen to the settings.
-        print("Transfer to other screen")
-        
         performSegue(withIdentifier: "settings", sender: self)
         
-        //When the Settings VC is dismissed need to see if the settings have changed.
-        print("When does this fire??? Settings pressed......")
-        //Does not return here...
+        //When the Settings VC is dismissed updateSettings will be called.
         
     }
     
     func updateSettings(value: RoundedValue) {
         //This is what will be called when the settings panel is dismissed.
         //Assign the value returned to the amount to round by
-        
-        print("Returned to main view controller value that I got back is \(value)")
         roundBy = value
     }
     
@@ -137,13 +127,19 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
     
     @IBAction func clearPressed(_ sender: UIButton) {
         
+        clearCalculation()
+
+    }
+    
+    func clearCalculation() {
+        
         lblCheckAmount.text = ""
         lblTipAmount.text = ""
         lblTotal.text = ""
         total = 0
         checkAmount = 0
         decHasBeenPressed = false
-
+        
     }
     
     
@@ -175,6 +171,8 @@ class MainVC: UIViewController, AVAudioPlayerDelegate, SettingsUpdate {
         //calculate and then display the true tip percentage based on the rounded up value
         let tipPercentage = roundedUpTip / checkAmount
         lblTipPercent.text = String.init(format: "Tip %%%.1f", (tipPercentage * 100))
+        
+        //Now to work on splitting the check up. Will just keep it simple and divide the tip and the total by the amount each person should pay.
         
     }
     
