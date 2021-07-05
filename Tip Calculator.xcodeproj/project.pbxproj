@@ -17,6 +17,7 @@
 		CF02CCF12690BDE1000EA634 /* BackgroundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCF02690BDE1000EA634 /* BackgroundLabel.swift */; };
 		CF02CCF32690BF17000EA634 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCF22690BF17000EA634 /* BaseView.swift */; };
 		CF02CCF52690C018000EA634 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF02CCF42690C018000EA634 /* ColorSwatch.swift */; };
+		CF6BCD442693A8F3000BC597 /* ConverterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BCD432693A8F3000BC597 /* ConverterHelper.swift */; };
 		CF79A8D2268BD520009A5AD6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79A8D1268BD520009A5AD6 /* SettingsVC.swift */; };
 		CFA6A8402690C67B000D68C4 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA6A83F2690C67B000D68C4 /* CalculatorButton.swift */; };
 		CFBCE6B6268A883C00058B96 /* RoundedTipHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCE6B5268A883C00058B96 /* RoundedTipHelper.swift */; };
@@ -36,6 +37,7 @@
 		CF02CCF02690BDE1000EA634 /* BackgroundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLabel.swift; sourceTree = "<group>"; };
 		CF02CCF22690BF17000EA634 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CF02CCF42690C018000EA634 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
+		CF6BCD432693A8F3000BC597 /* ConverterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterHelper.swift; sourceTree = "<group>"; };
 		CF79A8D1268BD520009A5AD6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		CFA6A83F2690C67B000D68C4 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		CFBCE6B5268A883C00058B96 /* RoundedTipHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTipHelper.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				CFBCE6B5268A883C00058B96 /* RoundedTipHelper.swift */,
+				CF6BCD432693A8F3000BC597 /* ConverterHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				CF02CCF32690BF17000EA634 /* BaseView.swift in Sources */,
 				CF02CCF52690C018000EA634 /* ColorSwatch.swift in Sources */,
 				CFA6A8402690C67B000D68C4 /* CalculatorButton.swift in Sources */,
+				CF6BCD442693A8F3000BC597 /* ConverterHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

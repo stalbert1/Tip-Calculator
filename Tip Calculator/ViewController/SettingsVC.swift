@@ -27,7 +27,6 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("SettingsVC did load")
         pickerTipRound.delegate = self
         pickerTipRound.dataSource = self
         
@@ -49,9 +48,6 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     
     @IBAction func returnSelected() {
-        
-        //Need to store the selection as a default
-        
         
         //will dismiss this view controller
         dismiss(animated: true, completion: nil)
@@ -79,23 +75,15 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        print("Did select row \(row). The value is \(tipRoundingUnits[row])")
-        
-        //let possiblePlanet = Planet(rawValue: 7)
-        //force unwrapped here ????
-        
         //How to go from Int value to actual Enum
         let possibleValue = RoundedValue(rawValue: Int(tipRoundingUnits[row])!)
         
-        
-        let numChoices = RoundedValue.allCases.count
-        print("The value would be \(String(describing: possibleValue))There are \(numChoices) number of choices in RoundedValue Enum")
+        //let numChoices = RoundedValue.allCases.count
         //Now the key becomes how to save this to defaults. Defaults dont save custom types.
         //Can save the default as an int. Then when decoding can use the raw value as above.
         
         //Storing the selection in User Defaults
         let selectedVal = Int(tipRoundingUnits[row])
-        print("The selected value to store is \(String(describing: selectedVal))")
         UserDefaults.standard.set(selectedVal, forKey: "roundingUnits")
         
         //If its nill will round by twenty five

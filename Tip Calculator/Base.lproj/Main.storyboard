@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -15,45 +15,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BaseView" customModule="Tip_Calculator" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-g4-T2I">
-                                <rect key="frame" x="1" y="1" width="373" height="663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-g4-T2I">
+                                <rect key="frame" x="1" y="1" width="318" height="476"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Cer-Z6-GSE">
-                                        <rect key="frame" x="1" y="0.0" width="371" height="93"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Cer-Z6-GSE">
+                                        <rect key="frame" x="1" y="0.0" width="316" height="185"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tNv-tw-izB">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="31"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Amount $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNu-Fe-Pon" customClass="CalculatorLabel" customModule="Tip_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="31"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of check" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viy-mg-3dL" customClass="CalculatorLabel" customModule="Tip_Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="183" y="0.0" width="183" height="31"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of check" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viy-mg-3dL" customClass="CalculatorLabel" customModule="Tip_Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="46.5"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb1-a4-brC" customClass="CalculatorLabel" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="31" width="366" height="31"/>
+                                                <rect key="frame" x="0.0" y="46.5" width="311" height="46"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMw-qc-S78" customClass="CalculatorLabel" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="62" width="366" height="31"/>
+                                                <rect key="frame" x="0.0" y="92.5" width="311" height="46.5"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYU-XV-I9U" customClass="CalculatorLabel" customModule="Tip_Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="139" width="311" height="46"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -61,14 +56,15 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="GMw-qc-S78" secondAttribute="trailing" constant="5" id="5Dq-5V-eMp"/>
                                             <constraint firstAttribute="trailing" secondItem="hb1-a4-brC" secondAttribute="trailing" constant="5" id="ONM-pD-rDM"/>
-                                            <constraint firstAttribute="trailing" secondItem="tNv-tw-izB" secondAttribute="trailing" constant="5" id="nUz-K0-ZP6"/>
+                                            <constraint firstAttribute="trailing" secondItem="EYU-XV-I9U" secondAttribute="trailing" constant="5" id="eYJ-HD-zUj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Viy-mg-3dL" secondAttribute="trailing" constant="5" id="jAB-ax-psv"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-tb-Sn3">
-                                        <rect key="frame" x="5" y="95" width="363" height="93"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="300" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-tb-Sn3">
+                                        <rect key="frame" x="5" y="187" width="308" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-A7-onn" customClass="BackgroundLabel" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="IxV-5T-QpK"/>
                                                 </constraints>
@@ -77,27 +73,30 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.17999999999999999" minValue="0.12" maxValue="0.28000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-QE-mGA">
-                                                <rect key="frame" x="136" y="0.0" width="229" height="94"/>
+                                                <rect key="frame" x="136" y="0.0" width="174" height="29"/>
                                                 <connections>
                                                     <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="AQ4-J7-6Ey"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-9M-eqC">
-                                        <rect key="frame" x="20" y="190" width="333" height="93"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-9M-eqC">
+                                        <rect key="frame" x="20" y="217" width="278" height="29.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WT-Mw-71a" customClass="BackgroundLabel" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="33.5" width="105" height="26.5"/>
+                                                <rect key="frame" x="0.0" y="1.5" width="105" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-iz-Fu8">
-                                                <rect key="frame" x="139.5" y="30.5" width="94" height="32"/>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-iz-Fu8">
+                                                <rect key="frame" x="112" y="0.0" width="94" height="29.5"/>
+                                                <connections>
+                                                    <action selector="splitCheckValChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vxn-FG-qKu"/>
+                                                </connections>
                                             </stepper>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-eo-4M7">
-                                                <rect key="frame" x="307" y="31.5" width="26" height="30.5"/>
+                                                <rect key="frame" x="252" y="0.0" width="26" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
@@ -109,10 +108,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GsF-6m-VZt">
-                                        <rect key="frame" x="15" y="285" width="343" height="93"/>
+                                        <rect key="frame" x="15" y="248.5" width="288" height="55.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7W-gQ-XUN" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="55.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="7"/>
@@ -121,7 +120,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8s-f4-B6O" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="96.5" y="0.0" width="95" height="55.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="8"/>
@@ -130,7 +129,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8n-Aw-eTf" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="193.5" y="0.0" width="94.5" height="55.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="9"/>
@@ -141,10 +140,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BVY-fH-SLz">
-                                        <rect key="frame" x="15" y="380" width="343" height="93"/>
+                                        <rect key="frame" x="15" y="306" width="288" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elp-HI-ofG" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="56"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="4"/>
@@ -153,7 +152,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8V-Ak-9ek" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="96.5" y="0.0" width="95" height="56"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="5"/>
@@ -162,7 +161,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiB-Rh-fWq" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="193.5" y="0.0" width="94.5" height="56"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="6"/>
@@ -173,10 +172,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tVJ-kG-3M5">
-                                        <rect key="frame" x="15" y="475" width="343" height="93"/>
+                                        <rect key="frame" x="15" y="364" width="288" height="55.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sw-PZ-o5G" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="55.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="1"/>
@@ -185,7 +184,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dl-5Q-gVe" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="96.5" y="0.0" width="95" height="55.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="2"/>
@@ -194,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPT-2T-qgb" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="193.5" y="0.0" width="94.5" height="55.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="3"/>
@@ -205,10 +204,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="COs-Lt-XEQ">
-                                        <rect key="frame" x="15" y="570" width="343" height="93"/>
+                                        <rect key="frame" x="15" y="421.5" width="288" height="54.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2b-Tb-cwB" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="54.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="C"/>
@@ -217,7 +216,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-b7-Kyz" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="96.5" y="0.0" width="95" height="54.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="0"/>
@@ -226,7 +225,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbL-Cl-xaB" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="113" height="93"/>
+                                                <rect key="frame" x="193.5" y="0.0" width="94.5" height="54.5"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="."/>
@@ -266,6 +265,7 @@
                     </view>
                     <connections>
                         <outlet property="lblCheckAmount" destination="Viy-mg-3dL" id="vEW-XG-aZK"/>
+                        <outlet property="lblSplitCheckInfo" destination="EYU-XV-I9U" id="Mak-Sy-nZa"/>
                         <outlet property="lblTipAmount" destination="hb1-a4-brC" id="lu3-Y8-okI"/>
                         <outlet property="lblTipPercent" destination="Ecy-A7-onn" id="ogD-V3-Nju"/>
                         <outlet property="lblTotal" destination="GMw-qc-S78" id="6Ql-Z9-lsm"/>
@@ -281,20 +281,20 @@
             <objects>
                 <viewController id="f7I-io-wRd" customClass="SettingsVC" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cd-L5-pfy" customClass="BaseView" customModule="Tip_Calculator" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounded Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-mn-nEK">
-                                <rect key="frame" x="107" y="10" width="161" height="20.5"/>
+                                <rect key="frame" x="79.5" y="10" width="161" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91Z-uJ-mlx" customClass="CalculatorButton" customModule="Tip_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="164.5" y="602" width="46" height="30"/>
+                                <rect key="frame" x="110" y="415" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Ob-ls-VCp"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="VFo-QV-4BQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VFo-QV-4BQ"/>
                                 </constraints>
                                 <state key="normal" title="Return"/>
                                 <connections>
@@ -302,7 +302,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaH-Ak-wPw">
-                                <rect key="frame" x="0.0" y="90.5" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="90.5" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L6k-rT-nYr"/>
